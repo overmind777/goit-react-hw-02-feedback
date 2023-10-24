@@ -1,5 +1,6 @@
 import Notification from '../Notificat/Notification';
 import { StyledStatistics } from './StyledStatistics';
+import PropTypes from 'prop-types';
 
 const Statistics = ({
   good,
@@ -24,3 +25,11 @@ const Statistics = ({
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  countTotalFeedback: PropTypes.number,
+  countPositiveFeedbackPercentage: PropTypes.number,
+};
