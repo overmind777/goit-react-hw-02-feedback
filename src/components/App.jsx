@@ -10,8 +10,14 @@ export class App extends React.Component {
     bad: 0,
   };
 
+  // leaveFeedback = e => {
+  //   this.setState({ [e]: this.state[e] + 1 });
+  // };
+
   leaveFeedback = e => {
-    this.setState({ [e]: this.state[e] + 1 });
+    this.setState(prev => ({
+      [e]: prev[e] + 1,
+    }));
   };
 
   countTotalFeedback = () => {
